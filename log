@@ -37,3 +37,13 @@ graph.c:33:24: error: invalid use of incomplete typedef ‘Map’
    33 |     Grafo->adjacencyMap->map_create(is_equal_string);
       |                        ^~
 1f84174
+Thu May 14 08:22:09 PM UTC 2026: 
+ graph.c | 1 -
+ 1 file changed, 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:33:24: error: invalid use of incomplete typedef ‘Map’
+   33 |     Grafo->adjacencyMap->map_create(is_equal_string);
+      |                        ^~
+eb3facd
