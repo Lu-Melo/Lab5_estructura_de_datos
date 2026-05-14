@@ -158,3 +158,22 @@ graph.c:37:6: note: declared here
    37 | void addNode(Graph* g, const char* label) {
       |      ^~~~~~~
 a730a1b
+Thu May 14 08:52:22 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:39:38: error: invalid application of ‘sizeof’ to incomplete type ‘Map’
+   39 |     Map* nodo = (Map*) malloc(sizeof(Map));
+      |                                      ^~~
+graph.c:40:16: error: invalid use of incomplete typedef ‘Map’
+   40 |     strcpy(nodo->label, label);
+      |                ^~
+graph.c:41:12: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+   41 |     return nodo;
+      |            ^~~~
+graph.c:37:6: note: declared here
+   37 | void addNode(Graph* g, const char* label) {
+      |      ^~~~~~~
+3235d71
