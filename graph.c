@@ -30,7 +30,7 @@ Graph* createGraph() {
     Graph* Grafo = (Graph*) malloc(sizeof(Graph));
     if (Grafo == NULL) exit(EXIT_FAILURE);
     Grafo->adjacencyMap = NULL;
-    return NULL;
+    return Grafo;
 }
 
 void addNode(Graph* g, const char* label) {
