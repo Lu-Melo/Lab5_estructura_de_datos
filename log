@@ -17,3 +17,13 @@ Thu May 14 08:18:43 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 c816057
+Thu May 14 08:21:03 PM UTC 2026: 
+ graph.c | 2 ++
+ 1 file changed, 2 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:33:10: error: ‘Graph’ has no member named ‘map_create’
+   33 |     Grafo->map_create(is_equal_string);
+      |          ^~
+4f6930b
