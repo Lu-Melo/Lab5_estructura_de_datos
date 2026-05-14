@@ -37,7 +37,7 @@ Graph* createGraph() {
 void addNode(Graph* g, const char* label) {
     if (!g || !label) return;
     Map* nodo = (Map*) malloc(sizeof(Map));
-    strcpy(g, nodo->(char* label), nodo);
+    strcpy(g, nodo->label, nodo);
     return nodo;
 }
 
