@@ -36,7 +36,9 @@ Graph* createGraph() {
 
 void addNode(Graph* g, const char* label) {
     if (!g || !label) return;
-
+    Node* nodo = (Node*) malloc(sizeof(Node));
+    strcpy(g, nodo->(char* label), nodo);
+    return nodo;
 }
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
