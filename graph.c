@@ -84,7 +84,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     if (edge == NULL) exit(EXIT_FAILURE);
 
     while (edge != NULL) {
-        edge = 
+        edge = list_first(lista_aristas);
         if(strcmp(edge->target, label2) == 0) {
             return edge->weight;
         }
