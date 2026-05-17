@@ -36,8 +36,14 @@ Graph* createGraph() {
 
 void addNode(Graph* g, const char* label) {
     if (!g || !label) return;
-    Map* nodo = (Map*) malloc(sizeof(Map));
-    strcpy(nodo->label, label);
+    if(map_search(g->adjacencyMap, label) != NULL) {
+        return;
+    }
+    
+    const char* copia_label = (const char*) malloc(sizeof(const char));
+    if (copia_label == NULL) exit(EXIT_FAILURE);
+    
+    strcpy(label, copia_label);
     return;
 }
 
