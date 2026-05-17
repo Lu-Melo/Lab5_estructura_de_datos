@@ -112,7 +112,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
         edge = list_next(lista_aristas);
     }
 
-    if(first(lista_auxiliar) != NULL) {
+    if(list_first(lista_auxiliar) != NULL) {
         return lista_auxiliar; 
     }
     return NULL; 
