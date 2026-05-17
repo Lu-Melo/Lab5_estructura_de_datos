@@ -85,7 +85,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 
     while (list_first(lista_aristas) != NULL) {
         edge = list_first(lista_aristas);
-        if(strcmp(edge->target, label2) == 1) {
+        if(strcmp(edge->target, label2) == 0) {
             return edge->weight;
         }
         list_popCurrent(lista_aristas);
