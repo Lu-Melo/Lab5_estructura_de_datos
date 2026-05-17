@@ -38,7 +38,7 @@ void addNode(Graph* g, const char* label) {
     if (!g || !label) return;
     Map* nodo = (Map*) malloc(sizeof(Map));
     strcpy(nodo->label, label);
-    return nodo;
+    return;
 }
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
