@@ -428,3 +428,26 @@ graph.c:63:67: error: expected ‘;’ before ‘)’ token
 graph.c:63:67: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 1478b6a
+Sun May 17 10:42:14 PM UTC 2026: 
+ graph.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:53:34: error: request for member ‘adjacencyMap’ in something not a structure or union
+   53 |     MapPair* par = map_search(src->adjacencyMap, (void*)src));
+      |                                  ^~
+graph.c:53:61: error: expected ‘,’ or ‘;’ before ‘)’ token
+   53 |     MapPair* par = map_search(src->adjacencyMap, (void*)src));
+      |                                                             ^
+graph.c:64:19: error: passing argument 1 of ‘list_pushBack’ from incompatible pointer type [-Wincompatible-pointer-types]
+   64 |     list_pushBack(par, edge);
+      |                   ^~~
+      |                   |
+      |                   MapPair *
+In file included from graph.h:4,
+                 from graph.c:6:
+list.h:20:26: note: expected ‘List *’ but argument is of type ‘MapPair *’
+   20 | void list_pushBack(List *L, void *dato);
+      |                    ~~~~~~^
+db9e7b9
