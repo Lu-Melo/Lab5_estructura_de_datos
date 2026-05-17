@@ -83,7 +83,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     Edge* edge = (Edge*) malloc(sizeof(Edge));
     if (edge == NULL) exit(EXIT_FAILURE);
 
-    while (list_first(lista_aristas) != NULL) {
+    while (edge != NULL) {
         edge = list_first(lista_aristas);
         if(strcmp(edge->target, label2) == 0) {
             return edge->weight;
