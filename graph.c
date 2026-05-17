@@ -72,7 +72,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     return -1; 
 }
 
-/* Retorna una nueva List* que contiene elementos de tipo char* (las etiquetas)
+// Retorna una nueva List* que contiene elementos de tipo char* (las etiquetas)
 List* getAdjacentLabels(Graph* g, const char* label) {
     if (!g || !label) return NULL;
 
@@ -111,4 +111,3 @@ void destroyGraph(Graph* g) {
     free(g->adjacencyMap);
     free(g);
 }
-*/

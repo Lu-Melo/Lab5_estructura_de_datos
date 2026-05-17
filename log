@@ -377,3 +377,8 @@ Compilation failed
 /nix/store/mkvc0lnnpmi604rqsjdlv1pmhr638nbd-binutils-2.44/bin/ld: /home/runner/workspace/test.c:254:(.text+0x8b4): undefined reference to `destroyGraph'
 collect2: error: ld returned 1 exit status
 4ae56e5
+Sun May 17 10:31:38 PM UTC 2026: 
+ graph.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  0|0
+ef0f98a
