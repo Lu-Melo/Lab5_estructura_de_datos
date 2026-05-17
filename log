@@ -382,3 +382,16 @@ Sun May 17 10:31:38 PM UTC 2026:
  1 file changed, 1 insertion(+), 2 deletions(-)
  tests:  0|0
 ef0f98a
+Sun May 17 10:36:53 PM UTC 2026: 
+ graph.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:60:18: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   60 |     edge->weight = NULL;
+      |                  ^
+graph.c:63:22: error: request for member ‘adjacencyMap’ in something not a structure or union
+   63 |     list_pushBack(src->adjacencyMap, edge);
+      |                      ^~
+9fb427a
