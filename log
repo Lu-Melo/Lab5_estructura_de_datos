@@ -395,3 +395,36 @@ graph.c:63:22: error: request for member ‘adjacencyMap’ in something not a s
    63 |     list_pushBack(src->adjacencyMap, edge);
       |                      ^~
 9fb427a
+Sun May 17 10:38:43 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:60:18: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   60 |     edge->weight = NULL;
+      |                  ^
+graph.c:63:33: error: request for member ‘adjacencyMap’ in something not a structure or union
+   63 |     list_pushBack(map_search(src->adjacencyMap, (void*)src)), edge);
+      |                                 ^~
+graph.c:63:5: error: too few arguments to function ‘list_pushBack’
+   63 |     list_pushBack(map_search(src->adjacencyMap, (void*)src)), edge);
+      |     ^~~~~~~~~~~~~
+In file included from graph.h:4,
+                 from graph.c:6:
+list.h:20:6: note: declared here
+   20 | void list_pushBack(List *L, void *dato);
+      |      ^~~~~~~~~~~~~
+graph.c:63:61: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   63 |     list_pushBack(map_search(src->adjacencyMap, (void*)src)), edge);
+      |                                                             ^
+graph.c:63:5: error: statement with no effect [-Werror=unused-value]
+   63 |     list_pushBack(map_search(src->adjacencyMap, (void*)src)), edge);
+      |     ^~~~~~~~~~~~~
+graph.c:63:67: error: expected ‘;’ before ‘)’ token
+   63 |     list_pushBack(map_search(src->adjacencyMap, (void*)src)), edge);
+      |                                                                   ^
+      |                                                                   ;
+graph.c:63:67: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+1478b6a

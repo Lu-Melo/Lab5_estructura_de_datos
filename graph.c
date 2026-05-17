@@ -60,7 +60,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     edge->weight = NULL;
     edge->target = NULL;
     
-    list_pushBack(src->adjacencyMap, edge);
+    list_pushBack(map_search(src->adjacencyMap, (void*)src)), edge);
 }
 
 List* getEdges(Graph* g, const char* label) {
