@@ -75,7 +75,22 @@ List* getEdges(Graph* g, const char* label) {
 
 int getWeight(Graph* g, const char* label1, const char* label2) {
     if (!g || !label1 || !label2) return -1;
+    MapPair* par = map_search(g->adjacencyMap, (void*)label);
+    if(par == NULL) {
+        return -1;
+    }
+    List * lista_aristas = par->value;
+    Edge* edge = (Edge*) malloc(sizeof(Edge));
+    if (edge == NULL) exit(EXIT_FAILURE);
 
+    while (list_first(lista_aristas) != NULL) {
+        edge = list_first(lista_aristas);
+        if(strcmp(edge->target, label2) == 1) {
+            return edge->weight;
+        }
+        list_popCurrent(lista_aristas);
+        edge = list_next(lista_aristas);
+    }
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
     return -1; 
 }
