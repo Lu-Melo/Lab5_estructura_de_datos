@@ -108,7 +108,6 @@ List* getAdjacentLabels(Graph* g, const char* label) {
 
     while (edge != NULL) {
         list_pushBack(lista_auxiliar, edge->target);
-        list_popCurrent(lista_aristas);
         edge = list_next(lista_aristas);
     }
 
