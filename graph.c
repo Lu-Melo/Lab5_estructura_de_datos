@@ -99,7 +99,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
     if (!g || !label) return NULL;
     MapPair* par = map_search(g->adjacencyMap, (void*)label);
     if(par == NULL) {
-        return -1;
+        return NULL;
     }
     List * lista_aristas = par->value;
     List * lista_auxiliar = list_create();
@@ -115,7 +115,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
     if(fisrt(lista_auxiliar) != NULL) {
         return lista_auxiliar; 
     }
-    return -1; 
+    return NULL; 
 }
 
 void destroyGraph(Graph* g) {

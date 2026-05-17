@@ -599,3 +599,17 @@ graph.c:118:12: error: returning ‘int’ from a function with return type ‘L
       |            ^
 cc1: all warnings being treated as errors
 768e280
+Sun May 17 11:01:35 PM UTC 2026: 
+ graph.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getAdjacentLabels’:
+graph.c:115:8: error: implicit declaration of function ‘fisrt’ [-Wimplicit-function-declaration]
+  115 |     if(fisrt(lista_auxiliar) != NULL) {
+      |        ^~~~~
+graph.c:115:30: error: comparison between pointer and integer [-Werror]
+  115 |     if(fisrt(lista_auxiliar) != NULL) {
+      |                              ^~
+cc1: all warnings being treated as errors
+370204b
