@@ -87,7 +87,6 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
         if(strcmp(edge->target, label2) == 0) {
             return edge->weight;
         }
-        list_popCurrent(lista_aristas);
         edge = list_next(lista_aristas);
     }
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
