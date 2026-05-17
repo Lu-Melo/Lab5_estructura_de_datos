@@ -40,10 +40,11 @@ void addNode(Graph* g, const char* label) {
         return;
     }
     
-    const char* copia_label = (const char*) malloc(sizeof(const char));
-    if (copia_label == NULL) exit(EXIT_FAILURE);
+    const char* copia_label = strdup(label);
+    List * nueva_lista = list_create();
+
+    map_insert();
     
-    strcpy(label, copia_label);
     return;
 }
 

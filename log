@@ -242,3 +242,30 @@ In function ‘strcpy’,
 <built-in>: note: by argument 2 of type ‘const char *’ to ‘__builtin_strcpy’ declared here
 cc1: all warnings being treated as errors
 781f36e
+Sun May 17 10:14:19 PM UTC 2026: 
+ graph.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:39:36: error: passing argument 2 of ‘map_search’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   39 |     if(map_search(g->adjacencyMap, label) != NULL) {
+      |                                    ^~~~~
+In file included from graph.c:8:
+map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *’
+   22 | MapPair *map_search(Map *map, void *key);
+      |                               ~~~~~~^~~
+graph.c:46:5: error: too few arguments to function ‘map_insert’
+   46 |     map_insert();
+      |     ^~~~~~~~~~
+map.h:18:6: note: declared here
+   18 | void map_insert(Map *map, void *key, void *value);
+      |      ^~~~~~~~~~
+graph.c:44:12: error: unused variable ‘nueva_lista’ [-Werror=unused-variable]
+   44 |     List * nueva_lista = list_create();
+      |            ^~~~~~~~~~~
+graph.c:43:17: error: unused variable ‘copia_label’ [-Werror=unused-variable]
+   43 |     const char* copia_label = strdup(label);
+      |                 ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+5075c00
