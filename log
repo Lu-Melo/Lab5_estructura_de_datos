@@ -451,3 +451,23 @@ list.h:20:26: note: expected ‘List *’ but argument is of type ‘MapPair *�
    20 | void list_pushBack(List *L, void *dato);
       |                    ~~~~~~^
 db9e7b9
+Sun May 17 10:42:45 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:53:34: error: request for member ‘adjacencyMap’ in something not a structure or union
+   53 |     MapPair* par = map_search(src->adjacencyMap, (void*)src);
+      |                                  ^~
+graph.c:64:19: error: passing argument 1 of ‘list_pushBack’ from incompatible pointer type [-Wincompatible-pointer-types]
+   64 |     list_pushBack(par, edge);
+      |                   ^~~
+      |                   |
+      |                   MapPair *
+In file included from graph.h:4,
+                 from graph.c:6:
+list.h:20:26: note: expected ‘List *’ but argument is of type ‘MapPair *’
+   20 | void list_pushBack(List *L, void *dato);
+      |                    ~~~~~~^
+6ef5bb7

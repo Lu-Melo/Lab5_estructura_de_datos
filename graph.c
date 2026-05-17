@@ -50,7 +50,7 @@ void addNode(Graph* g, const char* label) {
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     if (!g || !src || !dest) return;
-    MapPair* par = map_search(src->adjacencyMap, (void*)src));
+    MapPair* par = map_search(src->adjacencyMap, (void*)src);
     if(par == NULL) {
         return;
     }
