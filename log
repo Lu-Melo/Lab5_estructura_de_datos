@@ -366,3 +366,14 @@ Sun May 17 10:30:29 PM UTC 2026:
  1 file changed, 3 insertions(+)
  tests:  0|0
 2a86eba
+Sun May 17 10:31:25 PM UTC 2026: 
+ graph.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+/nix/store/mkvc0lnnpmi604rqsjdlv1pmhr638nbd-binutils-2.44/bin/ld: /tmp/ccTFVvb7.o: in function `test_integracion_rutas':
+/home/runner/workspace/test.c:239:(.text+0x816): undefined reference to `destroyGraph'
+/nix/store/mkvc0lnnpmi604rqsjdlv1pmhr638nbd-binutils-2.44/bin/ld: /home/runner/workspace/test.c:230:(.text+0x848): undefined reference to `destroyGraph'
+/nix/store/mkvc0lnnpmi604rqsjdlv1pmhr638nbd-binutils-2.44/bin/ld: /home/runner/workspace/test.c:248:(.text+0x88b): undefined reference to `destroyGraph'
+/nix/store/mkvc0lnnpmi604rqsjdlv1pmhr638nbd-binutils-2.44/bin/ld: /home/runner/workspace/test.c:254:(.text+0x8b4): undefined reference to `destroyGraph'
+collect2: error: ld returned 1 exit status
+4ae56e5
