@@ -559,3 +559,13 @@ Sun May 17 10:56:13 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 12fbc5f
+Sun May 17 10:56:30 PM UTC 2026: 
+ graph.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:88:9: error: expected expression before ‘if’
+   88 |         if(strcmp(edge->target, label2) == 0) {
+      |         ^~
+6ed4cba
